@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>xqzme</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>MOSIFE</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Биография</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Мои проекты</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">Ссылки</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Personal site</h1>
+    <h3>xqzme release</h3>
+    <h1></h1>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Немного обо мне.</h2>
+      <span><p>Middle programmer</p><p>Python, JavaScript, html/css, data science</span>
+    </div>
+    <div class="text">
+      <span><p>Привет. Меня зовут Айден. Мне 15 лет. Родом я из Кыргызстана. Общительный, отзывчивый паренек.)</p><p>С детсва изучаю программирование. На данный момент могу с уверенностью сказать что знаю язык Python на высоком уровне.</p></span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Проекты</h2>
+    <h4>добавил несколько программ, которые на удивление работают</h4>
+
+    <div class="img">
+      <img src="img/bandicam 2021-12-20 19-25-22-357.jpg" alt="">
+      <span>Minecraft in python with UE</span>
+    </div>
+    <div class="img">
+      <img src="img/tmb_232043_351192.png" alt="">
+      <span>Миюки - тг бот</span>
+    </div>
+    </div>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">instagram</span><br>
+      <span class="heading"><a href="https://instagram.com/__xqzme__">instagram account</a></span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+    </div>
+    <div>
+      <span class="title">telegram</span><br>
+      <span class="heading"><a href="https://t.me/mosif_e">telegram account</a></span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+    </div>
+    <div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
